@@ -26,16 +26,14 @@ for i in range(1,year):
     else:
         time+=365
 
-leapyear=isLeapYear(year)
-
-thirty_months = [1, 3, 5, 7, 8, 10, 12]
+thirtyone_months = [1, 3, 5, 7, 8, 10, 12]
 months = range(1, month)
 
 for i in months:
-    if i in thirty_months:
+    if i in thirtyone_months:
         time+=31
     elif(i==2):
-        if(leapyear==True):
+        if(isLeapYear(year) is True):
             time+=29
         else:
             time+=28
@@ -71,13 +69,11 @@ for i in range(1, sys.maxsize):
             time+=365
         break
     year+=1
-
-print(year,"년 ",time)
-
+    
 temp=0
 
 for i in range(1,13):
-    if i in thirty_months:
+    if i in thirtyone_months:
         temp=31
         time-=31
     elif i==2:
