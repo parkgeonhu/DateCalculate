@@ -93,7 +93,7 @@ for i in range(1,13):
 
 day=time
 
-print(year," ",month," ",day)
+print(after_day,"후의 날짜는 ",year,"년",month,"월",day,"일")
 
 
 
